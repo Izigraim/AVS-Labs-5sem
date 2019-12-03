@@ -36,7 +36,7 @@ void atomic_counter(int numTasks, int numThreads, unsigned int duration) {
 	long stop = clock();
 	long time = stop - start;
 
-	cout << "Âðåìÿ íà ôóíêöèè ñ " << numThreads << " ïîòîêàìè" << ": "<< time << " ìèëëèñåêóíä ";
+	cout << "Ð’Ñ€ÐµÐ¼Ñ Ð½Ð° Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ Ñ " << numThreads << " Ð¿Ð¾Ñ‚Ð¾ÐºÐ°Ð¼Ð¸" << ": "<< time << " Ð¼Ð¸Ð»Ð»Ð¸ÑÐµÐºÑƒÐ½Ð´ ";
 	if (all_of(values.cbegin(), values.cend(), [](int i) {
 		return i == 1;
 		})) {
