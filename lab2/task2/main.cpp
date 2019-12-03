@@ -23,7 +23,7 @@ void Task(int size) {
 		for (int consumerI : consumerNum) {
 
 			atomic<int> sum = 0;
-			cout << "Ïðîèçâîäèòåëåé: " << producerI << " Ïîòðåáèòåëåé: " << consumerI << endl;
+			cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÐµÐ¹: " << producerI << " ÐŸÐ¾Ñ‚Ñ€ÐµÐ±Ð¸Ñ‚ÐµÐ»ÐµÐ¹: " << consumerI << endl;
 			int ii = 0;
 			int jj = 0;
 
@@ -33,7 +33,7 @@ void Task(int size) {
 					q.push(1);
 				}
 				auto end = clock();
-				printf("Ïðîèçâîäèòåëü %d - %f \n", ++ii, (double)(end - start) / 1000);
+				printf("ÐŸÑ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ %d - %f \n", ++ii, (double)(end - start) / 1000);
 			};
 
 			auto consumer = [&]() {
@@ -44,7 +44,7 @@ void Task(int size) {
 					sum += val;
 				}
 				auto end = clock();
-				printf("Ïîòðåáèòåëü %d - %f \n", ++jj, (double)(end - start) / 1000);
+				printf("ÐŸÐ¾Ñ‚Ñ€ÐµÐ±Ð¸Ñ‚ÐµÐ»ÑŒ %d - %f \n", ++jj, (double)(end - start) / 1000);
 			};
 
 			vector<thread> threads;;
@@ -62,7 +62,7 @@ void Task(int size) {
 			else
 			{
 				cout << "-" << endl;
-				cout << "Ñóììû íå ñîâïàëè" << endl;
+				cout << "Ð¡ÑƒÐ¼Ð¼Ñ‹ Ð½Ðµ ÑÐ¾Ð²Ð¿Ð°Ð»Ð¸" << endl;
 				exit(0);
 			}
 		}
